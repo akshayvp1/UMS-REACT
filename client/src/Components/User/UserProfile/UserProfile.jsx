@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./UserProfile.css";
-import axiosInstance from "../../utils/axiosInstance";
+import axiosInstance from "../../../utils/axiosInstance";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-import { setUser, setAuthState } from "../../redux/slice/authSlice";
+import { setUser, setAuthState } from "../../../redux/slice/authSlice";
 import { useNavigate } from "react-router-dom";
 
 const ProfilePage = () => {

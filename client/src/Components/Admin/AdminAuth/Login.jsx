@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import adminInstance from '../../utils/axiosInstance'; // Import the custom Axios instance
+import adminInstance from '../../../utils/axiosInstance'; // Import the custom Axios instance
 import './Login.css'
 import { toast } from 'react-toastify';
 import { Navigate, useNavigate } from 'react-router-dom';
@@ -43,7 +43,7 @@ function Login() {
     }
 
     return (
-        <div className="login-container">
+        <div className="login-container mt-12">
             <div className="login-box">
                 <h2>Admin</h2>
                 <form  className="login-form" onSubmit={handleSubmit}>

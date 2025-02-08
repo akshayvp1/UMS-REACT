@@ -1,19 +1,21 @@
 import React from 'react';
-import Login from './Components/auth/Login';
+import Login from './Page/user/Login/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from './Components/user/DashBoard';
-import UserProfile from './Components/user/UserProfile';
-import ProtectedRoute from './Components/user/ProtectedRoute';
+import Dashboard from './Page/user/Home/Home';
+import UserProfile from './Page/user/Profile/Profile';
+import ProtectedRoute from './utils/ProtectedRoute';
 import { ToastContainer } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css'; 
-import AdiminLogin from './Components/admin/Login'
-import AdminDashbord from './Components/admin/DashBord'
-import AddUser from './Components/admin/AddUser'
+import AdiminLogin from './Page/admin/Login/Login'
+import AdminDashbord from './Page/admin/Home/Home'
+import AddUser from './Page/admin/AddUser/AddUser'
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Login />} />
         <Route path="/admin" element={<AdiminLogin />} />
@@ -22,9 +24,8 @@ function App() {
         
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+        
       </Routes>
-
-      {/* ToastContainer should be outside Routes to work globally */}
       <ToastContainer />
     </BrowserRouter>
   );

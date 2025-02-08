@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import adminInstance from '../../utils/axiosInstance'; 
+import adminInstance from '../../../utils/axiosInstance'; 
 import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -147,8 +147,8 @@ const Dashboard = () => {
       <nav className="bg-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex justify-between items-center">
-            <h1 className="text-xl font-bold text-gray-800">Dashboard</h1>
-            <div className="flex items-center gap-4">
+            
+            <div className="flex items-center gap-4 ml-[800px]" >
               <input
                 type="text"
                 placeholder="Search..."

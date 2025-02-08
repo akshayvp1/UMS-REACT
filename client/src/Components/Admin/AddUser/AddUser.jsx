@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import adminInstance from '../../utils/axiosInstance'; 
+import adminInstance from '../../../utils/axiosInstance'; 
 import { toast } from "react-toastify";
 import { Navigate, useNavigate } from "react-router-dom";
 
@@ -80,7 +80,7 @@ const navigate = useNavigate()
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md">
+    <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md mt-10">
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">Add New User</h2>
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         {/* Name Field */}

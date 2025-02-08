@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { clearUser, setAuthState, setUser } from '../../redux/slice/authSlice';
-import axiosInstance from '../../utils/axiosInstance';
+import { clearUser, setAuthState, setUser } from '../../src/redux/slice/authSlice';
+import axiosInstance from '../../src/utils/axiosInstance';
 
 const ProtectedRoute = ({ children }) => {
     const isAuthenticated = useSelector(state => state.user.isAuthenticated)
